@@ -1,0 +1,168 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 150px;
+  width: 100%;
+  background: linear-gradient(180deg, #fffbfb 87.5%, #e7e9ee 100%);
+
+  i {
+    position: absolute;
+    top: 65px;
+    left: 550px;
+    display: none;
+  }
+
+  .logo {
+    img {
+      margin-top: 35px;
+      margin-left: 46px;
+      width: 300px;
+    }
+  }
+
+  .menu {
+    margin-left: 100px;
+
+    ul {
+      display: flex;
+      margin-top: 70px;
+      li {
+        list-style-type: none;
+        margin-left: 40px;
+        width: 125px;
+        text-align: center;
+        a {
+          text-decoration: none;
+          color: gray;
+        }
+        a.active {
+          background-color: #b2d235;
+          color: white;
+          padding: 7px 13px;
+          font-weight: bold;
+          font-size: 13px;
+          border-radius: 7px;
+        }
+        button {
+          border: none;
+          background-color: #fffbfb;
+          color: gray;
+          font-size: 15px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .menuHidden {
+    position: absolute;
+    display: none;
+
+    ul {
+      position: absolute;
+      width: 1530px;
+    }
+  }
+
+  .logout {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    .modal {
+      margin-left: 490px;
+      margin-top: 50px;
+      padding-bottom: 40px;
+      padding-top: 20px;
+      width: 500px;
+      border: 1px solid #000;
+      background-color: white;
+      border: none;
+      border-radius: 10px;
+
+      p {
+        width: 445px;
+        margin-left: 20px;
+        padding-left: 20px;
+        padding-bottom: 10px;
+        font-weight: bold;
+        border-bottom: 1px solid gray;
+      }
+      .listBtn {
+        display: flex;
+        padding-left: 300px;
+        button {
+          width: 70px;
+          height: 35px;
+          background-color: #3c86d4;
+          color: white;
+          font-weight: bold;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+
+          margin-left: 10px;
+        }
+
+        .btnNo {
+          background-color: white;
+          color: #3c86d4;
+          border: 1px solid #3c86d4;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header {
+    width: 768px;
+    background: linear-gradient(180deg, #fffbfb 87.5%, #e7e9ee 100%);
+    i {
+      display: block;
+      margin-left: 180px;
+    }
+    .logo {
+      img {
+        margin-top: 24px;
+      }
+    }
+
+    .menu {
+      display: none;
+    }
+    .menuHidden {
+      position: absolute;
+      top: 132px;
+      display: block;
+      z-index: 9999;
+      background-color: white;
+
+      ul {
+        width: 768px;
+        padding-left: 0px;
+        li {
+          background-color: white;
+          padding-top: 70px;
+          padding-bottom: 70px;
+          padding-left: 20px;
+          list-style-type: none;
+          border-bottom: 1px solid gray;
+          font-size: 20px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 439px) {
+  .header {
+    width: 768px;
+  }
+}
